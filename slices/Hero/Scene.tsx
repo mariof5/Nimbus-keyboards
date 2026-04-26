@@ -16,12 +16,13 @@ export function Scene() {
   //              rotationZ:0, 
   //             })
 
-
+    const scalingFactor = window.innerWidth <= 500 ? 0.4 : 1 ; // Adjust the scaling factor based on screen width
     return(
           <group>
-            <PerspectiveCamera 
-            makeDefault
-            position= {[0, 0, 4] } fov={50} />
+            <PerspectiveCamera  makeDefault position= {[0, 0, 4] } fov={50} />
+
+            <group scale={scalingFactor}>
+
             <Keyboard scale={9} position={[0.23, -0.6, 1.7]} rotation={[1.6, 0.3, 0]} /> 
           <group>
             <Keycap position={[0, -0.4, 2.6]} rotation={[0, 2, 3]}  texture={0}/>
@@ -36,6 +37,7 @@ export function Scene() {
             <Keycap position={[2, 0, 1]} rotation={[0, 0, 3]} texture={7}/>
             
           </group>
+            </group>
             <Environment files={["/hdr/blue-studio.hdr"]} environmentIntensity={.05}/>
             <spotLight position={[-2, 1.4, 3]} intensity={30} castShadow  shadow-bias={-0.001} shadow-normalBias={0.002} shadow-mapSize={1024}/> 
           </group>

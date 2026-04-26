@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Ground"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco ad culpa consectetur excepteur. Aliquip velit laborum ad sint eiusmod ea tempor dolor consequat aute. Amet reprehenderit exercitation pariatur consequat adipisicing."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
