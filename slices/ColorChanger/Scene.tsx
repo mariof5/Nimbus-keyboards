@@ -21,16 +21,27 @@ export function Scene({selectedTextureId, onAnimationComplete}: SceneProps){
     useGSAP(() => {
         //animate keybord
         if(!keyboardRef.current || selectedTextureId === currentTextureId) return;
-        const keyboard = keyboardRef.current
-        const tl = gsap.timeline({
-            onComplete:()=> {onAnimationComplete()}
-        })
+
+        const mm = gsap.matchMedia();
+        mm.add("(prefers-reduced-motion: no-preference", ()=>{
+            const keyboard = keyboardRef.current
+             if(!keyboard) return;
+            
+            const tl = gsap.timeline({
+                onComplete:()=> {onAnimationComplete()}
+            })
 
 
         tl.to(keyboard.position, {y:0.3, duration:0.4, ease:"power2.out", onComplete:()=>{setCurrentTextureId(selectedTextureId)}} )
         tl.to(keyboard.position, {y:0, duration:0.6, ease:"elastic.out(1,0.4"} )
         
-    
+        
+    })
+     mm.add("(prefers-reduced-motion: reduce", ()=>{
+        setCurrentTextureId(selectedTextureId)
+        onAnimationComplete()
+     })
+
     },[selectedTextureId])
 
     const materials = useMemo(()=>{

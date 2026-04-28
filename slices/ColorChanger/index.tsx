@@ -141,7 +141,6 @@ setIsAnimating(false);
                 : "border-gray-300 hover:border-gray-500",
               isAnimating && "cursor-not-allowed opacity-50"
             )}
-            disabled={isAnimating}
           >
             <div className="w-full mb-2 overflow-hidden rounded border bg-gray-100">
               <Image
