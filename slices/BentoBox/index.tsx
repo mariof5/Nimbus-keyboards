@@ -22,7 +22,7 @@ const BentoBox: FC<BentoBoxProps> = ({ slice }) => {
     >
       <FadeIn>
 
-      <h2 className="font-bold-slanted mb-8 scroll-pt-6 text-6xl uppercase md:text-8xl">
+      <h2 id="features" className="font-bold-slanted mb-8 scroll-pt-6 text-6xl uppercase md:text-8xl">
 
       <PrismicText field={slice.primary.heading} />
       </h2>

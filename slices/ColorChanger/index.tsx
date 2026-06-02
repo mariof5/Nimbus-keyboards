@@ -81,6 +81,7 @@ setIsAnimating(false);
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      id="keycap-changer"
       className="relative flex h-[90vh] min-h-[1000px] flex-col overflow-hidden bg-linear-to-br from-[#0f172a] to-[#062f4a] text-white"
     >
       {/* SVG Background */}
@@ -116,7 +117,7 @@ setIsAnimating(false);
 >
   {/* LEFT SIDE */}
   <div className="max-w-md shrink-0">
-    <h2 className="font-bold-slanted mb-1 text-4xl uppercase lg:mb-2 lg:text-6xl">
+    <h2  className="font-bold-slanted mb-1 text-4xl uppercase lg:mb-2 lg:text-6xl">
       <PrismicText field={slice.primary.heading}/>
     </h2>
 
